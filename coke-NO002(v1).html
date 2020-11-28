@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>互動圖文卡片 NO002
+
+  </title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .wrap {
+      width: 100%;
+      height: 100%;
+      /* 在大的框裡加flex，才能使其中的物件排列 */
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+
+    }
+
+    img {
+
+      width: 100%;
+    }
+
+    .card .txt {
+      position: absolute;
+      width: 300px;
+      top: 0px;
+      left: 0px;
+    }
+
+    /* 
+問題：
+1.四張圖片沒有整個橫向充滿版面
+2.裡面的文字沒有置中
+3.裡面的文字沒有隨著縮放做變化 */
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="card">
+      <!-- img要div嗎 -->
+      <div class="img">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="txt">
+        <h2>
+          魚都能懂的這個網頁畫面怎麼切 : 互動圖文卡片
+        </h2>
+        <p>互動圖文卡片是我們在網頁中經常見到的另一種稀飯版，不會切你就遜掉囉。</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="https://picsum.photos/300/300?radom=2" alt="">
+      </div>
+      <div class="txt">
+        <h2>
+          稀飯版都不會切你怎麼轉職？來我的網頁暴力班，保證讓你邊痛邊學會
+        </h2>
+        <p>把技能學好是需要一點點痛一點點爽一點點過癮跟一點點的暴力，不信你來報名試試看啊！</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="txt">
+        <h2>
+          不知道你有沒有聽過網頁的都市傳說，絕對不要相信沒有驗證過的謠言
+        </h2>
+        <p>網頁的都市傳說很多種，其中一種叫做兒子絕對定位老爸就要相對定位，這啥鬼？</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="https://picsum.photos/300/300?radom=1" alt="">
+      </div>
+      <div class="txt">
+        <h2>
+          買線上課程前停個幾秒想想，還是先把免費的金魚教學練一練吧
+        </h2>
+        <p>買了不會看，那不如來看免錢的，縱使不看也不會有罪惡感，更不會心痛啊</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
