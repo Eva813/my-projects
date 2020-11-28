@@ -55,15 +55,32 @@
   }
 
   .item .txt h2 {
-    font-size: 28px;
+    font-size: 25px;
     color: #ff0;
-    font-size: 500;
+    font-weight: 500;
   }
+
+  .txt h2:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: 10px 0;
+    background-color: #ff0;
+    transition: width .5s .5s;
+    /* (跑多久,延遲多久出現) */
+  }
+
+  .txt:hover h2:after {
+    width: 100%;
+  }
+
+
 
   .item .txt p {
     font-size: 18px;
     color: #fff;
-    font-size: 100;
+    font-weight: 100;
   }
 </style>
 
