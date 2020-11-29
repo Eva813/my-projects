@@ -18,80 +18,151 @@
       font-family: 'Noto Sans TC', sans-serif;
     }
 
-    .nav-bar {
-      width: 100%;
-      height: 90px;
-      background-image: linear-gradient(-200deg, #fff8f0, rosybrown);
-      rosybrown;
+    .main-header {
+      background: linear-gradient(-200deg, #fff8f0, rosybrown);
+    }
+
+    .main-header .nav-bar {
+      max-width: 1200px;
+      height: 95px;
+      margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
 
+
     }
 
-    .nav-bar .logo-img {
-      width: 80px;
-      height: 80px;
-      background-color: #fff;
+    .nav-bar .logo {
+      width: 100px;
+      margin: 15px 0;
+      /* background-color: #fff; */
       border-radius: 40%;
 
     }
 
-    .nav-bar .logo-img img {
+    .nav-bar .logo img {
       width: 100%;
+      vertical-align: middle;
     }
 
-    .selector {
-      width: 800px;
+    .main-header .selector {
+      margin: auto;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      /* justify-content: center;
+      align-items: center; */
 
     }
 
-    .item {
-      margin: 10px;
+    .main-header .selector a {
+      text-decoration: none;
       color: #fff;
-      font-weight: 500;
+      padding: 5px 1em;
+      position: relative;
+      transform: translateY(0px);
+      transition: .3s;
+    }
+
+    .main-header .selector a:hover {
+      transform: translateY(-5px);
+    }
+
+    .main-header .selector a:after {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #fff;
+      bottom: -5px;
+      /* top: 0; */
+      left: 50%;
+      right: 50%x;
+      height: 0;
+      transition: .3s;
+
+    }
+
+    .main-header .selector a:hover:after {
+      left: 0;
+      right: 0;
+    }
+
+    .main-header .search {
+      display: flex;
+    }
+
+    .main-header .search button,
+    .main-header .search input {
+      border: none;
+      background-color: #fff;
+      padding: 5px 10px;
+
+    }
+
+    .main-header .search button:focus,
+    .main-header .search input:focus {
+      outline: none;
+    }
+
+    .main-header .search button {
+      border-radius: 0 200px 200px 0;
+    }
+
+    .main-header .search input {
+      border-radius: 200px 0 0 200px;
     }
   </style>
+
+  <!-- 問題：
+  html標籤的包法也不同
+  如果在nav-bar外面不要再包一個容器的話，在撐開的時候，左右會變得很散。
+  1. 中間選單沒有用a超連結
+  2.logo也要用超連結
+  3.search，要input,search;此部分的排列要貼合 -->
 
 </head>
 
 <body>
-  <div class="nav-bar">
-    <div class="logo-img">
-      <img src="./img/codelogo.png" alt="">
+  <header class="main-header">
+    <div class="nav-bar">
+      <a href="#" class="logo">
+        <img src="./img/codelogo.png" alt="">
+      </a>
+      <div class="selector">
+
+        <!-- <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a> -->
+
+
+        <a href="">金魚都能懂系列</a>
+        <a href="">暴力網頁入門系列</a>
+        <a href="">CSS可樂系列</a>
+        <a href="">RWD原來醬子系列</a>
+
+
+
+
+      </div>
+
+      <form class="search">
+
+        <input type="search" name="search" id="search-bar" placeholder="輸入名稱">
+        <button class="search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+
+
+
+
+
+
     </div>
-    <div class="selector">
-
-      <div class="item">金魚都能懂系列</div>
-      <div class="item">暴力網頁</div>
-      <div class="item">CSS可樂系列</div>
-      <div class="item">RWD原來醬子</div>
-
-
-
-    </div>
-
-    <form class="search">
-
-      <input type="search" name="search" id="search-bar" placeholder="輸入名稱">
-      <button class="search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-
-
-
-
-
-
-  </div>
 
 
 
 
 </body>
+</header>
 
 </html>
