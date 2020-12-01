@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登入表單 NO017</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    body {
+      background-color: #fff4ea;
+    }
+
+    .wrap {
+      width: 500px;
+      height: 500px;
+      border: 10px solid #fff;
+      background-color: #0096d1;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+      vertical-align: middle;
+      align-items: center;
+
+    }
+
+    .wrap .txt h3 {
+      font-weight: 400;
+      text-align: left;
+      border-bottom: 1px solid #000;
+      margin-bottom: 10px;
+    }
+
+    .wrap form {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      /* background-color: #fff; */
+      width: 400px;
+      height: 400px;
+      padding: 10px;
+      margin: auto 15px;
+      vertical-align: middle;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .wrap form #account,
+    .wrap form #password {
+      border-radius: 5px;
+    }
+
+    .wrap form label {
+      margin: 5px;
+    }
+
+
+    .wrap .submit input {
+      width: 150px;
+      margin-top: 10px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="wrap">
+
+
+
+    <form action="">
+      <div class="txt">
+        <h3>會員登入</h3>
+      </div>
+      <label for="account">帳號</label>
+      <input type="text" id="account" name="" placeholder="Your account..">
+      <label for="password">密碼</label>
+      <input type="text" id="password" name="" placeholder="Your password..">
+      <div class="submit">
+        <input type="submit" value="登入">
+        <input type="submit" value="取消">
+      </div>
+    </form>
+
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>
