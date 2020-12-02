@@ -15,57 +15,93 @@
       font-family: 'Noto Sans TC', sans-serif;
     }
 
+    /* 要讓裡面的wrap置中，先要讓版面有高度 */
+    html,
     body {
-      background-color: #fff4ea;
+      height: 100%;
+    }
+
+    body {
+      /* height: 100%; */
+      /* background-color: rgba(246, 229, 141, 1.0); */
+      background: url('/img/beach.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .wrap {
-      width: 500px;
+      width: 600px;
       height: 500px;
       border: 10px solid #fff;
-      background-color: #0096d1;
-      border-radius: 50px;
-      display: flex;
+      background-color: rgba(255, 244, 234, 0.8);
+      border-radius: 5px;
+      backdrop-filter: blur(3px);
+      /* display: flex;
       flex-direction: column;
       vertical-align: middle;
+      align-items: center; */
+      display: flex;
+      justify-content: center;
       align-items: center;
 
     }
 
-    .wrap .txt h3 {
-      font-weight: 400;
-      text-align: left;
-      border-bottom: 1px solid #000;
-      margin-bottom: 10px;
-    }
-
-    .wrap form {
-      display: flex;
-      flex-direction: column;
-      margin: 10px;
-      /* background-color: #fff; */
+    form {
       width: 400px;
-      height: 400px;
+
+
+    }
+
+    form h3 {
+      font-size: 29px;
+      margin-bottom: 10px;
       padding: 10px;
-      margin: auto 15px;
-      vertical-align: middle;
-      justify-content: center;
-      align-content: center;
+      border-bottom: 2px solid #0096d1;
+      color: #0096d1;
     }
 
-    .wrap form #account,
-    .wrap form #password {
+    form .group {
+      margin-bottom: 20px;
+
+    }
+
+    .group label {
+      margin-bottom: 10px;
+      line-height: 2;
+      font-size: 18px;
+      color: #0096d1;
+      font-weight: 600;
+    }
+
+    #account,
+    #password {
+      width: 100%;
+      line-height: 3;
+      border: none;
       border-radius: 5px;
+      padding: 8px;
     }
 
-    .wrap form label {
-      margin: 5px;
+    .submit {
+      margin-top: 50px;
+      font-size: 0;
     }
 
+    .submit .sub {
+      font-size: 20px;
+      width: 190px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0096d1;
 
-    .wrap .submit input {
-      width: 150px;
-      margin-top: 10px;
+
+      padding: 10px 0;
+      color: #fff;
+    }
+
+    .submit .sub+.sub {
+      margin-left: 15px;
     }
   </style>
 
@@ -78,21 +114,23 @@
 
 
     <form action="">
-      <div class="txt">
-        <h3>會員登入</h3>
+
+      <!-- <div class="txt"> -->
+      <h3>會員登入</h3>
+      <!-- </div> -->
+      <div class="group">
+        <label for="account">帳號</label>
+        <input type="text" id="account" name="" placeholder="Your account..">
       </div>
-      <label for="account">帳號</label>
-      <input type="text" id="account" name="" placeholder="Your account..">
-      <label for="password">密碼</label>
-      <input type="text" id="password" name="" placeholder="Your password..">
+      <div class="group">
+        <label for="password">密碼</label>
+        <input type="text" id="password" name="" placeholder="Your password..">
+      </div>
       <div class="submit">
-        <input type="submit" value="登入">
-        <input type="submit" value="取消">
+        <input class="sub" type="submit" value="登入">
+        <input class="sub" type="submit" value="取消">
       </div>
     </form>
-
-
-
 
   </div>
 
