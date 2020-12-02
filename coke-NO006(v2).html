@@ -57,11 +57,15 @@
 
     }
 
+    .footer-item nav a:hover {
+      color: #fa0;
+    }
+
     .copyright {
       text-align: center;
 
       /* 這裡也加距離 */
-      margin: 150px;
+      margin: 150px 0 0;
       padding: 10px 0;
       background-color: #3e5293;
       color: #70f6df;
@@ -70,14 +74,40 @@
 
     }
 
-    .footer-subs form {
+    /* footer-item是flex的項目，所以他的高度和其他地方等高，但這個訂閱電子報欄位內容，並沒有等高<所以讓footer-item設定flex，設定直排，讓表單上下的距離能夠撐開 */
+    .footer-subs {
       display: flex;
+      flex-direction: column;
+
+    }
+
+
+    .footer-subs form {
+      /* 這裏的flex是為了讓輸入框與訂閱紐能夠並排 */
+      display: flex;
+      /* 這裏的margin與寬度的設定是為了讓輸入框能夠整個居中   */
+      margin: auto 0;
+      width: 100%;
+
     }
 
     /* 屬性選取器 */
     .footer-subs input[type="text"],
     .footer-subs input[type="submit"] {
       border: none;
+      padding: 5px 10px;
+    }
+
+    .footer-subs input[type="text"] {
+      /* 利用flex可以使輸入框滿版 */
+      width: 0;
+      flex-grow: 1;
+      /* width: 100%; */
+    }
+
+    .footer-subs input[type="submit"] {
+      color: #fff;
+      background-color: #3e5293;
     }
   </style>
 
