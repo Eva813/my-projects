@@ -21,9 +21,10 @@
     }
 
     .main-footer {
-      width: 100%;
+      /* width: 100%; */
       /* padding: 150px 0 0 0; */
-      background: linear-gradient(135deg, #ffecd2 60%, #fcb69f);
+      /* background: linear-gradient(135deg, #ffecd2 60%, #fcb69f); */
+      background: rgba(251, 188, 88);
     }
 
     .main-footer .container {
@@ -35,22 +36,28 @@
     }
 
 
-    .container .item {
+    /* .container .item {
       width: 0;
       flex-grow: 1;
       margin: 0 20px;
-    }
+    } */
 
-    .footer-item nav {
+    /* .footer-item nav {
       display: flex;
       flex-direction: column;
-    }
+    } */
   </style>
 
 
 </head>
 
-<!-- a連結前面的三角形是插入icon -->
+<!-- a連結前面的三角形是插入icon 
+  我的container的包覆，是包含4個item，沒有copyright（剛剛copyrigth一直在上面）
+無法讓item裡面直行排好
+訂閱：我是用btn
+
+
+-->
 
 <body>
 
@@ -87,7 +94,7 @@
         </nav>
       </div>
 
-      <div class="item">
+      <div class="item sub">
         <h4>訂閱電子報</h4>
         <form action="" class="footer-search">
           <input type="search" name="" id="">
@@ -96,12 +103,12 @@
         </form>
       </div>
 
-
-      <div class="copyright">
-        Copyright &copy; 2019 金魚都能懂得這個網頁畫面怎麼切
-      </div>
-
     </div>
+    <div class="copyright">
+      Copyright &copy; 2019 金魚都能懂得這個網頁畫面怎麼切
+    </div>
+
+
 
 
   </div>
