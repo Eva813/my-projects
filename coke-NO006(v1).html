@@ -22,30 +22,90 @@
 
     .main-footer {
       /* width: 100%; */
-      /* padding: 150px 0 0 0; */
+      padding: 150px 0 0 0;
       /* background: linear-gradient(135deg, #ffecd2 60%, #fcb69f); */
-      background: rgba(251, 188, 88);
+      background: rgba(251, 188, 88, 0.9);
     }
 
     .main-footer .container {
-      width: 1200px;
-
-      margin: auto;
       display: flex;
+      width: 1200px;
+      margin: auto;
+
 
     }
 
 
-    /* .container .item {
+    .container .item {
       width: 0;
       flex-grow: 1;
       margin: 0 20px;
-    } */
+    }
 
-    /* .footer-item nav {
+    .item h4 {
+      color: #a7401d;
+      border-bottom: 1px dotted #a7401d;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+    }
+
+    .item nav {
       display: flex;
       flex-direction: column;
-    } */
+    }
+
+    .item nav a {
+      text-decoration: none;
+      color: #a7401d;
+      margin: 2px 0;
+    }
+
+    .item nav a:hover {
+
+      color: #3e5293;
+    }
+
+
+    .main-footer .sub {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .sub form {
+      display: flex;
+      width: 100%;
+      margin: auto 0;
+      box-sizing: border-box;
+    }
+
+    .sub input[type="text"],
+    .sub button {
+      border: none;
+      padding: 5px 10px;
+    }
+
+    .sub input[type="text"] {
+      /* 利用flex可以使輸入框滿版 */
+      width: 0;
+      flex-grow: 1;
+      /* width: 100%; */
+    }
+
+    .sub button {
+      color: #fff;
+      background-color: #a7401d;
+    }
+
+
+    .main-footer .copyright {
+      text-align: center;
+      margin-top: 150px;
+      padding: 10px;
+      background-color: rgba(222, 134, 38);
+      color: #a7401d;
+    }
   </style>
 
 
@@ -97,9 +157,9 @@
       <div class="item sub">
         <h4>訂閱電子報</h4>
         <form action="" class="footer-search">
-          <input type="search" name="" id="">
+          <input type="text" name="" id="">
           <button class="btn">訂閱</button>
-
+          <!-- <input type="submit" value="訂閱"> -->
         </form>
       </div>
 
