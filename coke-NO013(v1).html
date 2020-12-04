@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/e8c7317cfe.js" crossorigin="anonymous"></script>
+  <title>側邊選單怎麼切 NO013</title>
+
+
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+
+    /* reset版面 */
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {}
+
+    .side-menu {
+      width: 300px;
+      height: 100%;
+      background-image: linear-gradient(0deg, #13547a, #80d0c7);
+      display: flex;
+      flex-direction: column;
+      /* 讓上面有空間出來，但同時也會出現卷軸 */
+      padding: 50px 0;
+      box-sizing: border-box;
+      box-shadow: 5px 0 10px hsla(240, 40%, 20%, .5);
+    }
+
+    nav a {
+      /* 讓a可以一行一行排列 */
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+    }
+
+    /* 沒有用before，它的線會滿版 */
+    /* nav a+a {
+      border-top: 1px solid #fff;
+    } */
+
+
+    nav a+a::before {
+      content: '';
+      position: absolute;
+      border-top: 1px solid rgba(255, 255, 255, .4);
+      left: 10px;
+      right: 10px;
+      top: 0;
+    }
+
+    .side-menu form {
+      display: flex;
+      margin: 0 10px 50px;
+      /* 設定表單外框形狀有圓弧形 */
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, .4);
+    }
+
+    /* input與button******* */
+    /* .side-menu form input {
+      border: none;
+      padding: 5px 10px;
+      width: 230px; */
+
+
+    /* background-color: transparent;
+      color: #fff;
+
+    } */
+
+    /* .side-menu form  button {
+      border: none;
+      padding: 5px 10px;
+      width: 50px;
+      background-color: transparent;
+      color: #fff;
+    } */
+
+    .side-menu form input,
+    .side-menu form button {
+      border: none;
+      padding: 5px 10px;
+
+      /* 設定透明才會讓，form表單的框顯示清楚 */
+      background-color: transparent;
+      color: #fff;
+    }
+
+    .side-menu form input:focus,
+    .side-menu form button:focus {
+      outline: none;
+    }
+
+    /* 寬度300，左右2邊有10px，剩下280，希望左邊選單大一點點 */
+
+
+    .side-menu form input {
+      width: 230px;
+    }
+
+    .side-menu form button {
+      width: 50px;
+    }
+
+    /* 動畫：讓icon消失，文字左縮 */
+    nav a .fa {
+      margin-right: -1.1em;
+      transform: scale(0);
+      transition: .3s;
+    }
+
+    nav a:hover .fa {
+      margin-right: 0em;
+      transform: scale(1);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="side-menu">
+    <form action="">
+      <!-- placeholder的字型如何修改 -->
+      <input type="search" placeholder="請輸入關鍵字">
+      <button><i class="fa fa-search"></i></button>
+
+    </form>
+    <nav>
+
+      <a href="#" id=""><i class="fa fa-users" aria-hidden="true"></i>鐵人賽</a>
+      <a href="#" id=""><i class="fa fa-gavel" aria-hidden="true"></i>暴力班</a>
+      <a href="#" id=""><i class="fa fa-object-group" aria-hidden="true"></i>RWD 醬子</a>
+      <a href="#" id=""><i class="fa fa-globe" aria-hidden="true"></i>金魚網頁</a>
+      <a href="#" id=""><i class="fa fa-cutlery" aria-hidden="true"></i>金魚切版</a>
+    </nav>
+
+
+  </div>
+
+
+
+</body>
+
+</html>
