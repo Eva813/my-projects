@@ -16,6 +16,7 @@ header li {
 
 #intro .bg-light{
   height: 70vh;
+  margin-top:0 ;
 }
 #intro h1{
   font-size: 52px;
@@ -34,4 +35,13 @@ header li {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+#second{
+  padding: 80px 0;
+}
+
+#second h3{
+  font-size: 36px;
+  line-height: 1.5;
 }
