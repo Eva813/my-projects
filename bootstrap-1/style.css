@@ -1,0 +1,37 @@
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+p,a,input,label,textarea,span,ul.li{
+  font-family: 'Noto Serif TC', serif;
+}
+
+header nav img{
+  width: 155px;
+}
+
+header li {
+  margin: 0 10px;
+}
+
+
+#intro .bg-light{
+  height: 70vh;
+}
+#intro h1{
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.btn{
+   background-color: #f05f5c;
+  color: white;
+  padding: 9px 26px;
+  border-radius: 20px;
+}
+
+#intro .container{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
