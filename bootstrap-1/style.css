@@ -82,7 +82,12 @@ img{
 #latest .upper{
   position: relative;
 }
-#latest .u1::after,#latest .u3::after{
+
+
+
+
+
+ #latest .u1::after,#latest .u3::after{
   position: absolute;
     top: 0;
     left: 0;
@@ -93,7 +98,7 @@ img{
     height: 100%;
 
 
-}
+} 
 
 #latest .u2::after{
   position: absolute;
@@ -123,7 +128,8 @@ img{
 }
 #latest .innertext h4{
   font-size: 22px;
-  margin-top: 18px;
+  /* margin-top: 10px; */
+  padding: 10px;
   color: black;
   z-index: 100;
   text-align: right;
@@ -131,6 +137,7 @@ img{
 
 #latest .lower{
   padding: 6px 20px 20px 20px ;
+  
 }
 
 #latest .lower h3{
@@ -140,6 +147,11 @@ img{
 }
 #latest .lower i{
   margin-right:6px ;
+}
+
+#latest .lower-btn{
+  padding: 5px 7px;
+float:right;
 }
 
 #latest .outer{
@@ -189,10 +201,10 @@ footer ul{
   margin-right: 50px;
  
 }
-footer li{
+footer ul li{
    margin-bottom: 10px;
 }
-footer li a{
+footer ul li a{
   color: #707070;
 }
 
