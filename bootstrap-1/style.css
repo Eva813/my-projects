@@ -1,0 +1,227 @@
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+p,a,input,label,textarea,span,ul.li{
+  font-family: 'Noto Serif TC', serif;
+}
+
+
+
+header nav img{
+  width: 155px;
+}
+
+header li {
+  margin: 0 10px;
+}
+
+
+#intro .jumbotron{
+  background:linear-gradient(0deg,rgba(255,255,255,.2),rgba(255,255,255,.4)) center center, url(./img/party3.jpg) no-repeat center center/cover;
+  
+  height: 70vh;
+  margin-top:0 ;
+}
+#intro h1{
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.btn{
+   background-color: #f05f5c;
+  color: white;
+  padding: 9px 26px;
+  border-radius: 20px;
+}
+
+#intro .container{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#second{
+  padding: 80px 0;
+}
+
+#second h3{
+  margin-bottom: 80px;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+P{
+  color: #707070;
+}
+
+/* 同時符合 */
+p.lead{
+  color: black;
+}
+/* 照片換掉 */
+#second img{
+  width: 100px;
+  border-radius: 100%;
+  margin-bottom: 13px;
+}
+
+/* 最後一段 */
+#latest {
+  padding: 80px 0;
+  background-color: rgb(248, 248, 248);
+}
+
+#latest h3{
+  margin-bottom: 80px;
+}
+
+img{
+  max-width: 100%;
+}
+#latest .upper{
+  position: relative;
+}
+
+
+
+
+
+ #latest .u1::after,#latest .u3::after{
+  position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(255, 255, 255,.2);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+
+} 
+
+#latest .u2::after{
+  position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(255, 255, 255,.1);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+#latest .innertext{
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background-color: rgba(255, 235, 205,.6);
+    padding: 5px;
+}
+#latest .innertext span{
+  background-color: rgba(58, 29, 29, 0.3);;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+#latest .innertext h4{
+  font-size: 22px;
+  /* margin-top: 10px; */
+  padding: 10px;
+  color: black;
+  z-index: 100;
+  text-align: right;
+}
+
+#latest .lower{
+  padding: 6px 20px 20px 20px ;
+  
+}
+
+#latest .lower h3{
+  font-size: 24px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+#latest .lower i{
+  margin-right:6px ;
+}
+
+#latest .lower-btn{
+  padding: 5px 7px;
+float:right;
+}
+
+#latest .outer{
+  background: white;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.08);
+}
+
+#latest a{
+  color: black;
+
+  text-decoration: none;
+}
+
+
+#email {
+  padding: 80px 0px ;
+}
+#email h3{
+  margin-bottom: 80px;
+}
+#email .input-group{
+    margin-bottom: 20px;
+}
+
+
+footer{
+  border-top: 1px solid #c9c9c9;
+  padding: 80px 0;
+}
+footer img{
+  width: 112px;
+  margin-bottom: 26px;
+}
+
+footer h4{
+  margin-bottom: 26px;
+}
+
+footer a{
+  color: #f05f5c;
+}
+
+footer ul{
+  list-style: none;
+  padding: 0;
+  float: left;
+  margin-right: 50px;
+ 
+}
+footer ul li{
+   margin-bottom: 10px;
+}
+footer ul li a{
+  color: #707070;
+}
+
+@media only screen and (max-width: 768px) {
+	#second h5 {
+	    margin-bottom: 63px;
+  }
+  #latest .outer{
+  margin-bottom: 54px; 
+    }
+
+	#latest .outer img{
+		width: 100%;
+	}
+	footer h4 {
+	    font-size: 17px;
+	    margin-top: 30px;
+	    margin-bottom: 18px;
+	}
+}
