@@ -74,7 +74,7 @@ function starsRepeat() {
     s += stars + '<br>';
   }
 
-  $('.show').html(`三角形為：<h4>${s}</h4>`)
+  $('.show').html(`直角三角形為：<h4>${s}</h4>`)
 };
 
 
@@ -87,23 +87,70 @@ $('.stars').click(function () {
 //////印出星星  倒三角形////////////
 function starsRepeat2() {
 
-  let n = 5;
+  let n = 6;
   let s = '';
 
-  for (let i = 5; i <= n; i--) {
+  for (let i = 6; i > 0; i--) {
     let stars = '';
-    for (let j = 0; j < i; j++) {
+
+    for (let k = 0; k < i - 1; k++) {
       stars += '*';
-      // console.log(stars);
     }
     s += stars + '<br>';
+
+
+
   }
 
-  $('.show').html(`倒三角為：<h4>${s}</h4>`)
+
+  $('.show').html(`倒直角三角形為：<h4>${s}</h4>`)
 };
 
 $('.stars2').click(function () {
   // e.preventDefault();
   $('.h-value').html('');
   starsRepeat2();
+});
+
+
+///
+
+function printDiamond() {
+  let n = 6;
+  let s = '';
+  for (let i = 1; i <= n; i++) {
+    let space = n - i;
+    for (let j = 0; j < space; j++) {
+      s += '';
+    }
+
+    let starNum = 2 * i - 1;
+    for (let k = 0; k < starNum; k++) {
+      s += '*';
+    }
+    s += '<br>';
+  }
+
+
+  ///
+
+  for (let i = n - 1; i >= 0; i--) {
+    let space = n - i;
+    for (let j = 0; j < space; j++) {
+      s += '';
+    }
+    let starNum = 2 * i - 1;
+    for (let k = 0; k < starNum; k++) {
+      s += '*';
+    }
+    s += '<br>'
+  }
+  console.log(s);
+  $('.show').html(`菱形為：<h4>${s}</h4>`).addClass('diamond')
+}
+
+$('.stars3').click(function () {
+  // e.preventDefault();
+  $('.h-value').html('');
+  printDiamond();
 });

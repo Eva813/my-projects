@@ -27,6 +27,7 @@ input{
      display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 
 }
 .submit{
@@ -58,4 +59,8 @@ input{
   font-weight: 400;
   /* height: 300px; */
    width: 250px; 
+}
+
+.diamond{
+  text-align: center;
 }
