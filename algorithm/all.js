@@ -38,7 +38,7 @@ function wordLowerCase() {
   let ans = '';
   for (let i = 0; i < value.length; i++) {
     let code = value.charCodeAt(i);
-    console.log(code);
+    //console.log(code);
     if (code >= 65 && code <= 90) {
       ans += String.fromCharCode(code + 32);
 
@@ -65,10 +65,12 @@ function starsRepeat() {
   let n = 5;
   let s = '';
 
-  for (let i = 0; i <= n; i++) {
+  for (let i = 1; i <= n; i++) {
+
     let stars = '';
-    for (let j = 0; j < i; j++) {
+    for (let j = 1; j <= i; j++) {
       stars += '*';
+
       // console.log(stars);
     }
     s += stars + '<br>';
@@ -81,6 +83,7 @@ function starsRepeat() {
 $('.stars').click(function () {
   // e.preventDefault();
   $('.h-value').html('');
+  $('.show').removeClass('diamond');
   starsRepeat();
 });
 
@@ -108,12 +111,13 @@ function starsRepeat2() {
 
 $('.stars2').click(function () {
   // e.preventDefault();
-  $('.h-value').html('');
+  $('.h-value').html('')
+  $('.show').removeClass('diamond');
   starsRepeat2();
 });
 
 
-///
+///印出菱形
 
 function printDiamond() {
   let n = 6;
@@ -121,7 +125,7 @@ function printDiamond() {
   for (let i = 1; i <= n; i++) {
     let space = n - i;
     for (let j = 0; j < space; j++) {
-      s += '';
+      s += '';//空白
     }
 
     let starNum = 2 * i - 1;
@@ -145,7 +149,7 @@ function printDiamond() {
     }
     s += '<br>'
   }
-  console.log(s);
+
   $('.show').html(`菱形為：<h4>${s}</h4>`).addClass('diamond')
 }
 
