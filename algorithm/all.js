@@ -158,3 +158,42 @@ $('.stars3').click(function () {
   $('.h-value').html('');
   printDiamond();
 });
+
+
+
+///去除空白/////
+//去除前後(左右)空白
+//https://segmentfault.com/a/1190000021637211
+function trimSpace() {
+  var value = $('.h-value').val();
+  let ans = value.replace(/\s*/g, "");
+  console.log(ans);
+  $('.show').html(`去除字串間空白是：${ans}`);
+}
+
+// String.prototype.trim = function () {
+//   alert(this);
+//   return this.replace(/(^[\s]*)|([\s]*$)/g, "");
+// }
+
+$('.trimSpace').click(function (e) {
+  // e.preventDefault();
+  $('.h-value').html('');
+  trimSpace();
+});
+
+///二進位轉整數(十進位)
+
+function toNumber() {
+  var value = $('.h-value').val();
+  let ans = parseInt(value, 2);
+  console.log(ans);
+  $('.show').html(`將二進位轉為整數是：${ans}`);
+};
+
+
+$('.toNumber').click(function (e) {
+  // e.preventDefault();
+  $('.h-value').html('');
+  toNumber();
+});
