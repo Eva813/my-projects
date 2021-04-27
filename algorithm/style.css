@@ -18,6 +18,11 @@ h1{
   
   margin-top:30px;
 }
+.h-value{
+  border-radius: 5px;
+  outline: none;
+}
+
 input{
   width: 30%;
   line-height: 2.2;
@@ -31,10 +36,10 @@ input{
 
 }
 .submit{
-
+ flex-basis: 300px;
   width:180px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 20px;
   border: aliceblue;
   border-radius: 5px;
