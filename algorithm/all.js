@@ -2,10 +2,11 @@
 
 
 function getLastCharacter() {
-
-  var value = $('.h-value').val();
+  //利用.trim()刪除字串兩端的空白符號
+  var value = $('.h-value').val().trim();
   // let str = $('.h-value').length;
   let last = value[value.length - 1];
+  console.log(value);
   $('.show').html(`最後一個字元是：${last}`)
 }
 
@@ -19,7 +20,7 @@ $('.last-one').click(function (e) {
 
 function getLastThreeCharacter() {
 
-  var value = $('.h-value').val();
+  var value = $('.h-value').val().trim();
   // let str = $('.h-value').length;
   let lastThree = value.slice(-3);
   $('.show').html(`最後三個字元是：${lastThree}`)
@@ -34,7 +35,7 @@ $('.last-three').click(function (e) {
 ///將單字轉小寫///////
 //用除錯來看看
 function wordLowerCase() {
-  var value = $('.h-value').val();
+  var value = $('.h-value').val().trim();
   let ans = '';
   for (let i = 0; i < value.length; i++) {
     let code = value.charCodeAt(i);
@@ -88,10 +89,47 @@ $('.stars').click(function () {
 });
 
 //////印出星星  倒三角形////////////
-function starsRepeat2() {
+// function starsRepeat2() {
 
+//   let n = 6;
+//   let s = '';
+
+//   for (let i = 6; i > 0; i--) {
+//     let stars = '';
+
+//     for (let k = 0; k < i - 1; k++) {
+//       stars += '*';
+//     }
+//     s += stars + '<br>';
+
+
+
+//   }
+
+
+//   $('.show').html(`倒直角三角形為：<h4>${s}</h4>`)
+// };
+////
+
+
+
+//印出不一樣的三角形////////////
+function starsRepeat2() {
   let n = 6;
   let s = '';
+
+  for (let i = 1; i <= n; i++) {
+
+    let stars = '';
+    for (let j = 1; j <= i; j++) {
+      stars += '*';
+
+      // console.log(stars);
+    }
+    s += stars + '<br>';
+  }
+
+
 
   for (let i = 6; i > 0; i--) {
     let stars = '';
@@ -106,8 +144,9 @@ function starsRepeat2() {
   }
 
 
-  $('.show').html(`倒直角三角形為：<h4>${s}</h4>`)
+  $('.show').html(`等腰三角為：<h4>${s}</h4>`)
 };
+
 
 $('.stars2').click(function () {
   // e.preventDefault();
@@ -115,8 +154,7 @@ $('.stars2').click(function () {
   $('.show').removeClass('diamond');
   starsRepeat2();
 });
-
-
+////////////////////////
 ///印出菱形
 
 function printDiamond() {
@@ -197,3 +235,6 @@ $('.toNumber').click(function (e) {
   $('.h-value').html('');
   toNumber();
 });
+
+
+
